@@ -5,9 +5,10 @@
     <h1>Hi {{ person }}!</h1> 
     <h2>I think you're {{ compliment }}!</h2>
 
-    <form action="/game"
+    <form action="/game" method="POST">
     <label for="play-game">Would you like to play a game?</label>
     <input type="radio" name="play-game" value="yes">Yes
     <input type="radio" name="play-game" value="no">No
     <button class="submit" name="submit">Submit</button>
+  </form>
 {% endblock %}

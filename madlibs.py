@@ -29,11 +29,11 @@ def say_hello():
     return render_template("hello.html")
 
 
-@app.route('/greet')
+@app.route('/greet', methods=["POST"])
 def greet_person():
     """Greet user with compliment."""
 
-    player = request.args.get("person")
+    player = request.form.get("person")
 
     compliment = choice(AWESOMENESS)
 
@@ -41,11 +41,11 @@ def greet_person():
                            person=player,
                            compliment=compliment)
 
-@app.route('/game')
+@app.route('/game', methods=["POST"])
 def show_madlib_form():
     """Decide if user wants to play game"""
 
-    play_game = request.args.get("play-game")
+    play_game = request.form.get("play-game")
 
     if play_game == "yes":
         return render_template("game.html")
@@ -53,16 +53,16 @@ def show_madlib_form():
     else:
         return render_template("goodbye.html")
 
-@app.route('/madlib')
+@app.route('/madlib', methods=["POST"])
 def show_madlib():
 
-    noun = request.args.get("noun")
-    noun2 = request.args.get("noun2")
-    place = request.args.get("place")
-    adjective = request.args.get("adjective")
-    person = request.args.get("person")
-    color = request.args.get("color")
-    food = request.args.get("food")
+    noun = request.form.get("noun")
+    noun2 = request.form.get("noun2")
+    place = request.form.get("place")
+    adjective = request.form.get("adjective")
+    person = request.form.get("person")
+    color = request.form.get("color")
+    food = request.form.get("food")
     
     
     return render_template("madlib.html",
