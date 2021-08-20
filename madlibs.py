@@ -57,6 +57,7 @@ def show_madlib_form():
 def show_madlib():
 
     noun = request.args.get("noun")
+    noun2 = request.args.get("noun2")
     place = request.args.get("place")
     adjective = request.args.get("adjective")
     person = request.args.get("person")
@@ -70,7 +71,7 @@ def show_madlib():
                             place = place,
                             person = person,
                             color = color,
-                            food = food
+                            food = food,
                             noun2 = noun2)
 
 
