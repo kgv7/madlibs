@@ -1,12 +1,7 @@
-<!doctype html>
-<html>
-<head>
-  <title>Madlib</title>
-  <link rel="stylesheet" href="/static/madlibs.css">
+{% extends 'hello.html' %}
+  {% block title %}Madlib{% endblock %}
 
-</head>
-<body>
-
+{% block content %}
 <h1>Here's Your Madlib:</h1>
 
 <div>
@@ -20,5 +15,4 @@
     So obsessed that <strong>{{ person }}</strong> dyed their <strong>{{noun2}} {{ color }}</strong>.
 </div>
 
-</body>
-</html>
+{% endblock %}
