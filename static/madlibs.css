@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    background-color: #888888;
+}
+
+h1 {
+    color: #13284c;
+}
+
+h2 {
+    color: #ff9016;
+}
+
+strong {
+    color:#ff9016;
+}
+
+.submit {
+    background-color: #13284c;
+    color: white;
+    font-size: 14px;
+
+}
+
+.submit:hover{
+    background-color: #ff9016;
+    color: white;
+    font-size: 18px;
+}
